@@ -272,6 +272,7 @@ function ServiceDetail(props) {
     post.attendees.filter((x) => x.email == email).length === 0 &&
     post.status === 'FULL' &&
     post.user.email !== email;
+  let showMap = attendeeView || serviceProviderView;
 
   let coordinates = `${post.latitude}, ${post.longitude}`;
   let coordinatesArray = [post.latitude, post.longitude];
@@ -322,7 +323,7 @@ function ServiceDetail(props) {
                   readOnly={true}
                 />
               ))}
-              
+
             <div className='card-footer'>
               <small className='text-muted'>
                 <div className='row'>
@@ -371,11 +372,10 @@ function ServiceDetail(props) {
                 </span>
               </div>
             )}
-            {!visitorView && (
-              <Map
-                center={coordinatesArray}
-                zoom={13}
-               >
+            {showYouMissTheLastSeat &&
+              ' ' + 'Sorry, you missed the last seat :)'}
+            {showMap && (
+              <Map center={coordinatesArray} zoom={13}>
                 <TileLayer
                   url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -387,8 +387,6 @@ function ServiceDetail(props) {
                 </Marker>
               </Map>
             )}
-            {showYouMissTheLastSeat &&
-              ' ' + 'Sorry, you missed the last seat :)'}
           </div>
         </div>
       </div>
