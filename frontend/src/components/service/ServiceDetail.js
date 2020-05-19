@@ -1,8 +1,7 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import swal from 'sweetalert';
 import PostsApi from '../../api/PostsApi';
-import { Editor, EditorState, convertFromRaw, ConvertFromRaw } from 'draft-js';
 import ServiceEditor from './ServiceEditor';
 import moment from 'moment';
 import Container from 'react-bootstrap/Container';
@@ -11,7 +10,7 @@ import Col from 'react-bootstrap/Col';
 import '../../style/ServiceDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
-import { Map, Popup, TileLayer, Marker, Circle } from 'react-leaflet';
+import { Map, Popup, TileLayer, Marker} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 var getLocalTime = function (stringDate) {

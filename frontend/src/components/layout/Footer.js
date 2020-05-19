@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../../style/Footer.css";
 
 function Footer() {
@@ -15,11 +14,6 @@ function Footer() {
               <li>Address: Lindstedtsvägen 30, 114 28 Stockholm</li>
               <li>Phone No: 0046-08 8675432</li>
             </ul>
-            {/* <div className="address">
-                E-Mail: meetout.se@gmail.com <br></br>
-                Address: Sveavägen 89, Stockholm <br></br>
-                Phone No: 0046-08 8675432
-              </div> */}
           </div>
 
           {/* Column 2 */}
@@ -30,9 +24,9 @@ function Footer() {
                 FAQ
               </a>{" "}
               <br></br>
-              <Link className="footer-links" to="localhost:3001">
+              <a href="https://localhost:3001" className="footer-links">
                 Chat
-              </Link>
+              </a>
             </div>
           </div>
 
