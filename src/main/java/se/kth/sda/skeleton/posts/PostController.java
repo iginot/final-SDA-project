@@ -68,10 +68,10 @@ public class PostController {
     @PutMapping("/{id}/book")
     public Post updatePostWithAttendeeInfo(@PathVariable Long id) throws Exception {
         User user = userService.findUserByEmail(authService.getLoggedInUserEmail());
-        Optional<Post> existingPost = postService.getByID(id);
-        if (existingPost.isPresent()){
-            postService.updateUserWithBookedService(user, existingPost.get());
-            return postService.updatePostWithAttendeeInfo(existingPost.get(), user);
+        Optional<Post> post = postService.getByID(id);
+        if (post.isPresent()){
+            postService.updateUserWithBookedService(user, post.get());
+            return postService.updatePostWithAttendeeInfo(post.get(), user);
         }
          throw new Exception("PostId " + id + " not found");
     }

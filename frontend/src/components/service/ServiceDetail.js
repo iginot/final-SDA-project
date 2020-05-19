@@ -16,7 +16,7 @@ import 'leaflet/dist/leaflet.css';
 
 var getLocalTime = function (stringDate) {
   let localTime = moment.utc(stringDate);
-  return localTime.local().format('ddd, MMMM Do YYYY, h:mm:ss a');
+  return localTime.local().format('ddd, MMMM Do YYYY, h:mm a');
 };
 
 var formatDate = function (stringDate) {
@@ -25,7 +25,7 @@ var formatDate = function (stringDate) {
 
 var getUpdateTime = function (stringDate) {
   let localTime = moment.utc(stringDate);
-  return localTime.local().startOf('hour').fromNow();
+  return localTime.local().fromNow();
 };
 
 function ServiceDetail(props) {
@@ -322,6 +322,7 @@ function ServiceDetail(props) {
                   readOnly={true}
                 />
               ))}
+              
             <div className='card-footer'>
               <small className='text-muted'>
                 <div className='row'>

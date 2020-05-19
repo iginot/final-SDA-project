@@ -1,32 +1,40 @@
 package se.kth.sda.skeleton.user;
 
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.*;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.client.AutoConfigureMockRestServiceServer;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.*;
-import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import se.kth.sda.skeleton.posts.Post;
 
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
-@AutoConfigureMockRestServiceServer
 public class UserTests {
 
-    @Autowired
-    private UserRepository userRepository;
+    @MockBean
+    UserService userService;
+
+    static User userMock = new User("test@test.com","jabuticaba","Ada Lovelace");
 
     @Test
     void creationAndSetup(){
-        User user = new User();
-        user.setEmail("test@test.com");
-        user.setName("Ada Lovelace");
-        user.setPassword("jabuticaba");
+        assertEquals(userMock.getEmail() ,"test@test.com");
+        assertEquals(userMock.getPassword() ,"jabuticaba");
+        assertEquals(userMock.getName() ,"Ada Lovelace");
+    }
 
-        assertEquals(user.getEmail() ,"test@test.com");
-        assertEquals(user.getPassword() ,"jabuticaba");
-        assertEquals(user.getName() ,"Ada Lovelace");
+    @Test
+    void findUserByEmailTest(){
+        // Arrange
+        Mockito.when(userService.findUserByEmail("test@test.com"))
+                .thenReturn(userMock);
+        // Act
+        User user = userService.findUserByEmail("test@test.com");
+        // Assert
+        Assertions.assertEquals(userMock, user);
     }
 }
 

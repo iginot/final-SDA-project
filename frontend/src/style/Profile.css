@@ -1,22 +1,4 @@
-/* .username {
-  width: 30em;
-  max-width: 100%;
-} */
 
-/* .email {
-    width: 30em;
-    max-width: 100%;
-  } */
-/* .email h5 {
-  display: inline-block;
-  max-width: 50%;
-  float: left;
-}
-.email p {
-  display: inline-block;
-  max-width: 50%;
-  float: right;
-} */
 
 */ .service-table {
   margin: 10px;
@@ -52,8 +34,6 @@
   border-bottom: 2px solid#176560;
 }
 
-.profile {
-}
 .profile-info {
   font-weight: 200px;
 }
@@ -66,5 +46,13 @@
 
 .table-link {
   color: #176560 !important;
-  
+  font-size: inherit;
 }
+
+.profile-pic{
+  
+  max-width: 40%;
+  margin-bottom: 15px;
+}
+
+

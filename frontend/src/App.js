@@ -21,6 +21,7 @@ import ServiceDetail from './components/service/ServiceDetail';
 import Profile from './components/profile/Profile';
 import AboutUs from './components/about/AboutUs';
 import Faq from './components/faq/Faq';
+import ProfilePic from './components/profile/ProfilePic';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(Auth.isLoggedIn());
@@ -50,7 +51,12 @@ function App() {
           <Route path='/profile'>
             <Profile />
           </Route>
-          <Route path='/aboutus'>
+          
+          <Route path='/profilepic'>
+            <ProfilePic />
+          </Route>
+
+          <Route path="/aboutus">
             <AboutUs />
           </Route>
 

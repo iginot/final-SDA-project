@@ -4,6 +4,7 @@ import moment from 'moment';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import "../../style/CommentCard.css";
 
 function CommentCard(props) {
   const [body, setBody] = React.useState('');
@@ -16,10 +17,6 @@ function CommentCard(props) {
     // Clear the input field
     setBody('');
     window.location.reload();
-  };
-
-  var formatDate = function (stringDate) {
-    return moment(stringDate).format("ddd, MMMM Do YYYY");
   };
 
  const deleteComment = () => {
@@ -97,23 +94,24 @@ function CommentCard(props) {
   let showDeleteButton = authUser && !edit;
   let showSaveButton = authUser && edit;
   let showCancelButton = authUser && edit;
+
   return (
     <div className='card mt-3'>
       <div className='card-body'>
         {edit && editedText}
-        <p> {edit || 'From: ' + props.comment.user.email}</p>
+        <p className="from-comment"> {edit || 'From: ' + props.comment.user.email}</p>
         <p>{edit || props.comment.body}</p>
-        <p> {'Created at: ' + formatDate(props.comment.createdAt)}</p>
-        <p> {'Updated at: ' + formatDate(props.comment.updatedAt)}</p>
+
+        <small className='text-muted'> <p> {edit || 'Updated ' + moment.utc(props.comment.updatedAt).format('ddd, MMMM Do YYYY')}</p> </small>
+        </div>
         <Container>
-          <Row>
+          <Row className="mb-2" >
             {showEditButton && editButton}
             {showDeleteButton && deleteButton}
             {showSaveButton && saveButton}
             {showCancelButton && cancelButton}
           </Row>
         </Container>
-      </div>
     </div>
   );
 }

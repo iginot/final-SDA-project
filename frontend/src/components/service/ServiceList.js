@@ -55,7 +55,7 @@ class ServiceList extends React.Component {
             <table class='table service-table'>
               <thead>
                 <tr>
-                  <th scope='col'>Name</th>
+                  <th scope='col'>Title</th>
                   <th scope='col'>Location</th>
                   <th scope='col'>Date</th>
                   <th></th>
