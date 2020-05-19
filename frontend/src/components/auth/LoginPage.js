@@ -3,7 +3,6 @@ import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import Auth from "../../services/Auth";
 import Footer from "../layout/Footer";
-import { Link } from "react-router-dom";
 
 class LoginPage extends Component {
   async login(loginData) {
@@ -24,23 +23,24 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="wrapper-login bg-light">
-        <div class="modal" id="login">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button class="close" data-dismiss="modal">
+        {/* MODAL TO DISPLAY LOGIN FORM */}
+        <div className="modal" id="login">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <button className="close" data-dismiss="modal">
                   &times;
                 </button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <div className="col-12">
                   <LoginForm onSubmit={this.login} />
                 </div>
               </div>
-              <div class="modal-footer">
+              <div className="modal-footer">
                 <button
                   type="button"
-                  class="btn btn-danger"
+                  className="btn btn-danger"
                   data-dismiss="modal"
                 >
                   Close
@@ -49,23 +49,24 @@ class LoginPage extends Component {
             </div>
           </div>
         </div>
-        <div class="modal" id="sign-up">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button class="close" data-dismiss="modal">
+        {/* MODAL TO DISPLAY SIGNUP FORM */}
+        <div className="modal" id="sign-up">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <button className="close" data-dismiss="modal">
                   &times;
                 </button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <div className="col-12 mt-4">
                   <RegisterForm onSubmit={this.register} />
                 </div>
               </div>
-              <div class="modal-footer">
+              <div className="modal-footer">
                 <button
                   type="button"
-                  class="btn btn-danger"
+                  className="btn btn-danger"
                   data-dismiss="modal"
                 >
                   Close
@@ -74,6 +75,7 @@ class LoginPage extends Component {
             </div>
           </div>
         </div>
+        {/* NAVBAR*/}
         <nav className="navbar navbar-expand-lg navbar-light bg-sedondary shadowNavbar">
           <a className="navbar-brand" href="#">
             <img
@@ -83,7 +85,7 @@ class LoginPage extends Component {
               alt="Logo"
             />
           </a>
-
+          {/* NAVBAR TOGGLE BUTTON ON SMALL SCREENS */}
           <button
             className="navbar-toggler"
             type="button"
@@ -98,7 +100,7 @@ class LoginPage extends Component {
               <li className="nav-item active">
                 <button
                   type="button"
-                  class="btn"
+                  className="btn"
                   data-toggle="modal"
                   data-target="#login"
                 >
@@ -108,7 +110,7 @@ class LoginPage extends Component {
               <li className="nav-item">
                 <button
                   type="button"
-                  class="btn"
+                  className="btn"
                   data-toggle="modal"
                   data-target="#sign-up"
                 >
@@ -121,17 +123,18 @@ class LoginPage extends Component {
 
         <br />
         <br />
+        {/* CAROUSELS */}
         <div className="container mt-2">
           <div
             id="carouselExampleIndicators"
-            class="carousel slide"
+            className="carousel slide"
             data-ride="carousel"
           >
-            <ol class="carousel-indicators">
+            <ol className="carousel-indicators">
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="0"
-                class="active"
+                className="active"
               ></li>
               <li
                 data-target="#carouselExampleIndicators"
@@ -142,23 +145,24 @@ class LoginPage extends Component {
                 data-slide-to="2"
               ></li>
             </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
+
+            <div className="carousel-inner">
+              <div className="carousel-item active">
                 <img
                   src={require(`../../assets/landingpagecarousels/bars.jpeg`)}
                   width={1200}
                   height={400}
                   alt="Logo"
                 />
-                <div class="carousel-caption d-none d-md-block">
-                  <h1 class="display-3 landingPageHeader" text-secondary>
+                <div className="carousel-caption d-none d-md-block">
+                  <h1 className="display-3 landingPageHeader" text-secondary>
                     Outdoor Trainings
                   </h1>
                   <p></p>
 
                   <button
                     type="button"
-                    class="btn   btn-lg"
+                    className="btn   btn-lg"
                     data-toggle="modal"
                     data-target="#sign-up"
                   >
@@ -166,22 +170,22 @@ class LoginPage extends Component {
                   </button>
                 </div>
               </div>
-              <div class="carousel-item">
+              <div className="carousel-item">
                 <img
                   src={require(`../../assets/landingpagecarousels/contrast.jpeg`)}
                   width={1200}
                   height={400}
                   alt="Logo"
                 />
-                <div class="carousel-caption d-none d-md-block">
-                  <h1 class="display-3 landingPageHeader" text-secondary>
+                <div className="carousel-caption d-none d-md-block">
+                  <h1 className="display-3 landingPageHeader" text-secondary>
                     Outdoor Sports
                   </h1>
                   <p></p>
 
                   <button
                     type="button"
-                    class="btn btn-lg"
+                    className="btn btn-lg"
                     data-toggle="modal"
                     data-target="#sign-up"
                   >
@@ -189,21 +193,21 @@ class LoginPage extends Component {
                   </button>
                 </div>
               </div>
-              <div class="carousel-item">
+              <div className="carousel-item">
                 <img
                   src={require(`../../assets/landingpagecarousels/leaves.jpeg`)}
                   width={1200}
                   height={400}
                   alt="Logo"
                 />
-                <div class="carousel-caption d-none d-md-block">
-                  <h1 class="display-3 landingPageHeader" text-secondary>
+                <div className="carousel-caption d-none d-md-block">
+                  <h1 className="display-3 landingPageHeader" text-secondary>
                     Open oppertunities for Business
                   </h1>
                   <p></p>
                   <button
                     type="button"
-                    class="btn btn-lg"
+                    className="btn btn-lg"
                     data-toggle="modal"
                     data-target="#sign-up"
                   >
@@ -254,10 +258,11 @@ class LoginPage extends Component {
             <div className="col-md-4">
               <div className="card shadow">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={require(`../../assets/landingpagecards/meditation.jpeg`)}
                   width={300}
                   height={600}
+                  alt = 'meditation'
                 />
                 <div className="card-body">
                   <h4 className="card.title display-3 landingPageHeader">
@@ -276,10 +281,11 @@ class LoginPage extends Component {
             <div className="col-md-4">
               <div className="card shadow">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={require(`../../assets/landingpagecards/sports.jpeg`)}
                   width={300}
                   height={600}
+                  alt="sports"
                 />
                 <div className="card-body">
                   <h4 className="card.title display-3 landingPageHeader">
@@ -298,10 +304,11 @@ class LoginPage extends Component {
             <div className="col-md-4">
               <div className="card shadow">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={require(`../../assets/landingpagecards/running.jpeg`)}
                   width={300}
                   height={600}
+                  alt="running"
                 />
                 <div className="card-body">
                   <h4 className="card.title display-3 landingPageHeader">

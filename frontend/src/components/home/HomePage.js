@@ -50,7 +50,7 @@ class HomePage extends Component {
                 src={require(`../../assets/homepagecarousels/leaves.jpeg`)}
                 width={1200}
                 height={300}
-                alt="Logo"
+                alt="Leaves"
               />
               <div className="carousel-caption d-none d-md-block">
                 <h1 className="display-3 landingPageHeader" text-warning>
@@ -94,6 +94,7 @@ class HomePage extends Component {
                   src={require(`../../assets/homepagecards/group-training.jpeg`)}
                   width={300}
                   height={200}
+                  alt="group-training"
                 />
                 <div className="card-body">
                   <h4 className="card.title landingPageHeader">Sports</h4>
@@ -116,6 +117,7 @@ class HomePage extends Component {
                   src={require(`../../assets/homepagecards/soccer-out.jpeg`)}
                   width={300}
                   height={200}
+                  alt="SoccerOut"
                 />
                 <div className="card-body">
                   <h4 className="card.title landingPageHeader">Soccer</h4>
@@ -135,6 +137,7 @@ class HomePage extends Component {
                   src={require(`../../assets/homepagecards/yoga.jpeg`)}
                   width={300}
                   height={200}
+                  alt="yoga"
                 />
                 <div className="card-body">
                   <h4 className="card.title landingPageHeader">Outdoor Yoga</h4>
@@ -163,6 +166,7 @@ class HomePage extends Component {
                   src={require(`../../assets/homepagecards/group-training2.jpeg`)}
                   width={300}
                   height={200}
+                  alt="group Training"
                 />
                 <div className="card-body">
                   <h4 className="card.title landingPageHeader">
@@ -187,6 +191,7 @@ class HomePage extends Component {
                   src={require(`../../assets/homepagecards/meditation-out.jpeg`)}
                   width={300}
                   height={200}
+                  alt="meditation"
                 />
                 <div className="card-body">
                   <h4 className="card.title landingPageHeader">Meditation</h4>
@@ -209,6 +214,7 @@ class HomePage extends Component {
                   src={require(`../../assets/homepagecards/group-run.jpeg`)}
                   width={300}
                   height={200}
+                  alt="group-run"
                 />
                 <div className="card-body">
                   <h4 className="card.title landingPageHeader">

@@ -1,6 +1,6 @@
 import React from "react";
 import PostsApi from './../../api/PostsApi';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import moment from 'moment';
 
 var getParams = function () {
@@ -52,7 +52,7 @@ class ServiceList extends React.Component {
         return (
           <div className='table table-hover table-responsive '>
             <h2>Available Events</h2>
-            <table class='table service-table'>
+            <table className='table service-table'>
               <thead>
                 <tr>
                   <th scope='col'>Title</th>

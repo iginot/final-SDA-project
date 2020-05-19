@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap ');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap ");
 body {
   margin: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .App {
   background-color: #f3eee6;
   color: #202020;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 .landingPageHeader {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
 }
 .shadow {
-  box-shadow: '5px 10px 10px #888888';
+  box-shadow: "5px 10px 10px #888888";
 }
 .shadowNavbar {
-  box-shadow: '5px 10px 12px #888888';
+  box-shadow: "5px 10px 12px #888888";
 }
 
 .page-container {
@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: calc(10px + 2vmin);
   color: #afadad;
 }
@@ -59,6 +59,7 @@ body {
   color: #176560;
   font-size: 15px;
 }
+
 .nav-link {
   font-size: medium;
 }
@@ -82,7 +83,6 @@ body {
   height: 64;
   font-weight: 800;
   color: white;
-  /* background-color: #176560; */
   background-color: #f26d21;
 }
 
@@ -96,7 +96,6 @@ body {
   height: 34;
   font-weight: 400;
   color: #f26d21;
-  /* background-color: #176560; */
 }
 
 .link-button-homepage .btn:hover {
@@ -107,10 +106,6 @@ body {
 .paragraph {
   font-weight: 800;
 }
-
-/* .card-body {
-  text-align: center;
-} */
 
 @media (max-width: 1090px) {
   .nav-item {
@@ -127,6 +122,17 @@ body {
 .nav-item :hover {
   border-bottom: 1px solid #262626;
   background-color: #79ba9e;
+}
+.link-button button {
+  height: 64;
+  font-weight: 800;
+  color: white;
+  background-color: #176560;
+}
+
+.link-button button:hover {
+  background-color: grey;
+  color: white;
 }
 
 @media (max-width: 1000px) {
@@ -160,9 +166,9 @@ body {
 }
 
 .carousel-caption {
-  position: 'absolute';
+  position: "absolute";
   top: 20%;
-  transform: 'translateY(-50%)';
+  transform: "translateY(-50%)";
 }
 
 .carousel-item .btn {
@@ -183,10 +189,12 @@ body {
   background-color: #e8f8f5;
 }
 
+/* Markdown for Activity Description*/
+
 .RichEditor-root {
   background: #fff;
   border: 1px solid #ddd;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-size: 14px;
   padding: 15px;
 }
@@ -215,7 +223,7 @@ body {
 .RichEditor-editor .RichEditor-blockquote {
   border-left: 5px solid #eee;
   color: #666;
-  font-family: 'Hoefler Text', 'Georgia', serif;
+  font-family: "Hoefler Text", "Georgia", serif;
   font-style: italic;
   margin: 16px 0;
   padding: 10px 20px;
@@ -223,13 +231,13 @@ body {
 
 .RichEditor-editor .public-DraftStyleDefault-pre {
   background-color: rgba(0, 0, 0, 0.05);
-  font-family: 'Inconsolata', 'Menlo', 'Consolas', monospace;
+  font-family: "Inconsolata", "Menlo", "Consolas", monospace;
   font-size: 16px;
   padding: 20px;
 }
 
 .RichEditor-controls {
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 14px;
   margin-bottom: 5px;
   user-select: none;
@@ -247,7 +255,13 @@ body {
   color: #5890ff;
 }
 
-.btn {
+/*All buttons*/
+
+.btn-success {
+  width: 160px;
+  background-color: #176560 !important;
+  border-color: #176560 !important;
+  color: whitesmoke !important;
   border-radius: 4px;
   text-shadow: 0 0.6px 0.5px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 0px 0px #f3eee6;
@@ -257,49 +271,64 @@ body {
   font-size: 1.1em;
 }
 
-.btn-success {
-  width: 160px;
-  background-color: #176560 !important;
-  border-color: #176560 !important;
-  color: whitesmoke !important;
-}
-
 .btn-primary {
   background-color: #79ba9e !important;
   border-color: #79ba9e !important;
   color: #262626 !important;
   width: 120px;
+  border-radius: 4px;
+  text-shadow: 0 0.6px 0.5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 0px 0px #f3eee6;
+  height: 50px;
+  text-align: center;
+  line-height: 1.1em;
+  font-size: 1.1em;
 }
 
 .btn-warning {
   width: 120px;
   background-color: #fed18c !important;
   border-color: #fed18c !important;
+  border-radius: 4px;
+  text-shadow: 0 0.6px 0.5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 0px 0px #f3eee6;
+  height: 50px;
+  text-align: center;
+  line-height: 1.1em;
+  font-size: 1.1em;
 }
 .btn-info {
   color: whitesmoke !important;
+  border-radius: 4px;
+  text-shadow: 0 0.6px 0.5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 0px 0px #f3eee6;
+  height: 50px;
+  text-align: center;
+  line-height: 1.1em;
+  font-size: 1.1em;
 }
 .btn-secondary {
   color: #262626 !important;
   width: 120px;
+  border-radius: 4px;
+  text-shadow: 0 0.6px 0.5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 0px 0px #f3eee6;
+  height: 50px;
+  text-align: center;
+  line-height: 1.1em;
+  font-size: 1.1em;
 }
 
 .btn-danger {
   width: 120px;
-
   background-color: #d11a2a !important;
-}
-
-.link-button button {
-  height: 64;
-  font-weight: 800;
-  color: white;
-  background-color: #176560;
-}
-
-.link-button button:hover {
-  background-color: grey;
-  color: white;
+  border-radius: 4px;
+  text-shadow: 0 0.6px 0.5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 0px 0px #f3eee6;
+  height: 50px;
+  text-align: center;
+  line-height: 1.1em;
+  font-size: 1.1em;
 }
 
 .leaflet-container {
@@ -307,6 +336,6 @@ body {
   height: 100vh;
 }
 
-div.flex-container.flex-wrap.some-margin {  
-  display:none;
+div.flex-container.flex-wrap.some-margin {
+  display: none;
 }

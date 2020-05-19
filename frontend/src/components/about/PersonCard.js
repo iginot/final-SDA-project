@@ -2,14 +2,13 @@ import React from 'react';
 import '../../style/PersonCard.css';
 import { FaGithub } from 'react-icons/fa'
 import {FaLinkedin} from 'react-icons/fa'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function PersonCard(props) {
 
     return (
-        <div class="card person-card text-center">
+        <div className="card person-card text-center">
 
-            <div class="card-body">
+            <div className="card-body">
                 <img src={require(`../../assets/developers/${props.person.image}`)} alt="Viji" id="team" className="img-fluid rounded-circle w-50 mb-3" />
                 <h3>{props.person.name}</h3>
                 <h5>{props.person.title}</h5>
